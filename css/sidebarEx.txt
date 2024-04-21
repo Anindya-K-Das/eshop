@@ -1,0 +1,72 @@
+
+html
+ <nav class="sidebar">
+        <div class="sidebarLink">
+            <img class="sideIcon" src="icons/home.svg">
+            <div class="sideText">Home</div>
+        </div>
+        
+        <div class="sidebarLink">
+            <img class="sideIcon" src="icons/explore.svg">
+            <div class="sideText">Explore</div>
+        </div>
+        <div class="sidebarLink">
+            <img class="sideIcon" src="icons/subscriptions.svg">
+            <div class="sideText">Subscriptions</div>
+        </div>
+        <div class="sidebarLink">
+            <img class="sideIcon" src="icons/originals.svg">
+            <div class="sideText">Originals</div>
+        </div>
+        <div class="sidebarLink">
+            <img class="sideIcon" src="icons/youtube-music.svg">
+            <div class="sideText">Youtube Music</div>
+        </div>
+        <div class="sidebarLink">
+            <img class="sideIcon" src="icons/library.svg">
+            <div class="sideText">library</div>
+        </div>
+    </nav>
+
+
+
+---------------------------------------
+css
+.sidebar{
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    top: 0px;
+    background-color: yellow;
+    width: 72px;
+    transition: width 1s;
+}
+
+.sidebar:hover{
+    width: 100px;
+}
+
+.sidebarLink{
+
+    height: 75px;
+    margin-bottom: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebarLink:hover{
+    background-color: rgb(234, 232, 232);
+}
+
+.sideIcon{
+    width: 23px;
+}
+
+.sideText{
+    font-size: 10px;
+    font-family: Roboto, Arial;
+    margin-top: 5px;
+}
+
