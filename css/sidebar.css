@@ -1,38 +1,216 @@
+.sidebar > *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+
+}
+
+
 .sidebar{
-    position: fixed;
-    left: 0px;
-    bottom: 0px;
-    top: 0px;
-    background-color: yellow;
-    width: 72px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 50px;
+    background-color: hsla(43, 100%, 50%, 0.748);
+    padding: .4rem .8rem;
+    padding-top: 40px;
+    transition: all 0.3s ease;
+}
+
+
+
+.sideicon{
+    transition: width 0.5s;
+    width: 50px;
+    vertical-align: middle;
+    border-radius: 12px;
+    line-height: 50px;
+    text-align: center;
+}
+
+
+.sidebar.active .sideicon{
     transition: width 1s;
+    width: 60px;
 }
 
-.sidebar:hover{
-    width: 100px;
+
+.nesIcon{
+    height: 65px;
 }
 
-.sidebarLink{
+.sidebar.active .nesIcon{
+    height: 80px;
+}
 
-    height: 75px;
-    margin-bottom: 1px;
+.eshopicon{
+    vertical-align: middle;
+    width: 150px;
+   
+}
+
+.sidebar.active ~ .games{
+    left: 250px;
+    width: calc(100% - 300px);
+}
+
+.sidebar.active{
+    width: 250px;
+}
+
+.sidebar #menubtn {
+    transition: left 0.8s;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    width: 30px;
+    line-height: 50px;
+    transform: translateX(-50%);
+}
+
+
+.sidebar.active #menubtn{
+    transition: left 0.5s;
+    left: 92%;
+
+}
+
+.menubar {
     display: flex;
-    justify-content: center;
+    height: 50px;
+    width: 100%;
     align-items: center;
-    flex-direction: column;
+    pointer-events: none;
+    transition: margin-top 0.5s;
+    margin-top: 20px;
 }
 
-.sidebarLink:hover{
-    background-color: rgb(234, 232, 232);
+.eshopicon {
+    opacity: 0;
 }
 
-.sideIcon{
-    width: 23px;
+#shopicon{
+    margin-bottom: 20px;
+}
+
+.sidebar.active .menubar{
+    opacity: 1;
+    transition: margin-top 1s;
+    margin-top: -10px;
+}
+
+.sidebar.active .eshopicon{
+    opacity: 1;
+    margin-left: 5px;
+    transition: opacity 2s;
+}
+
+.search{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    
+
+}
+.callsearch{
+    cursor: pointer;
+    width: 50px;
+    background-color: transparent;
+    border: 0;
+    position: absolute;
+    z-index: 1;
+    font-size: 1.25rem;
+    left: 1.5rem;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+input{
+    padding-left: 50px;
+    border-radius: 10px;
+    border: none;
+    height: 55px;
+    width: 100%;
+    background-color: hsla(29, 100%, 50%, 0.556);
+}
+
+.sidebar .searchBar{
+    opacity: 0;
+}
+
+
+
+.sidebar.active .searchBar{
+    opacity: 1;
+    margin-left: 5px;
+    transition: opacity 2s;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    position: relative;
+    list-style: none;
+    height: 50px;
+    width: 90%;
+    margin-top: 25px;
+    line-height: 50px;
+    padding: 1.25rm;
+    align-items: center;
+}
+
+ a{
+    display: block;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.8 rem;
+}
+
+.games{
+    position: absolute;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.2s ease;
+    width: calc(100% - 130px);
+    padding-left: 30px;
+    
+    
+}
+
+.sidebar.active .games{
+    position: absolute;
+    min-height: 100vh;
+    top: 0;
+    left: 80px;
+    transition: all 0.2s ease;
+    width: calc(100% - 190px);
+    padding-left: 30px;
+    
+    
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.eshopPage{
+    display: flex;
 }
 
 .sideText{
-    font-size: 10px;
-    font-family: Roboto, Arial;
-    margin-top: 5px;
+    opacity: 0;
 }
 
+.sidebar.active .sideText{
+    transition: opacity 0.5s;
+    opacity: 1;
+}
