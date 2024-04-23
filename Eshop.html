@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eshop</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/sidebar.css"> 
+    <link rel="stylesheet" href="css/games.css"> 
+    <link rel="stylesheet" href="css/general.css"> 
+
+
+    
+</head>
+<body>
+    <div class="eshopPage">
+        <div class="sidebar">
+            <div class="top">
+                <img id="menubtn" src="icons/hamburger-menu.svg" > 
+            </div>
+                <ul>
+                    <li class="bag">
+                        <div class="menubar">
+                            <a  href="#">
+                                <img class= "sideicon" id="shopicon" src="icons/shopBag.png" >
+                            </a>
+                            <img class="eshopicon" src="icons/Nintendo_eShop_logo.png">
+                        </div>
+                    </li>
+                    <li> 
+                    <div class="search">
+
+                        <button type="submit" class="callsearch"><img class= "sideicon" src="icons/search.svg"></button>
+                        <input class="searchBar" type="text" placeholder="Search">
+                    </div>
+                </li>
+                    <li>
+                        <a href="#">
+                            <img class= "sideicon" id="fbtn" src="icons/pro.png" >
+                            <span class="sideText">Featured</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class= "sideicon nesIcon"  id="rbtn" src="icons/NES.png" >
+                            <span class="sideText">Retro</span>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+
+        <div class="games">
+            <div class="currentPage">
+                <p>Featured</p>
+            </div>
+
+            <div class="gamesGrid gamesGridjs">
+
+                <div class= "videogame">
+
+                    <div class="gamePreview">
+                        <img class="gameImage" src="gameImages/smash.png">
+                    </div>
+    
+                    <div class="gameInfo">
+                        <div>
+                            <button class="bagbtn"><img class="bagButtonimg" src="gameImages/Nintendo_eShop_-_Icon.png"><p class="addToBagtxt">Add</p></button>
+                            
+                        </div>
+
+                        <div class="gameTitle">
+                            Super Smash Bros Ultimate
+                        </div>
+                        
+                        <div class="price"> 
+                            <p>$12.99</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+
+        </div>
+    </div>
+</body>
+
+<script type="module" src="scripts/sidebar.js"></script>
+<script type="module" src="scripts/game.js"></script>
+
+
+</html>

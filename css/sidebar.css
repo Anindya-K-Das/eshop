@@ -11,8 +11,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 50px;
+    height: 200%;
+    width: 60px;
     background-color: hsla(43, 100%, 50%, 0.748);
     padding: .4rem .8rem;
     padding-top: 40px;
@@ -30,6 +30,10 @@
     text-align: center;
 }
 
+.top{
+    z-index: 0;
+    cursor: pointer;
+}
 
 .sidebar.active .sideicon{
     transition: width 1s;
@@ -57,7 +61,7 @@
 }
 
 .sidebar.active{
-    width: 250px;
+    width: 220px;
 }
 
 .sidebar #menubtn {
@@ -82,7 +86,6 @@
     height: 50px;
     width: 100%;
     align-items: center;
-    pointer-events: none;
     transition: margin-top 0.5s;
     margin-top: 20px;
 }
@@ -92,8 +95,11 @@
 }
 
 #shopicon{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
+
+
 
 .sidebar.active .menubar{
     opacity: 1;
@@ -156,6 +162,7 @@ ul{
 }
 
 li{
+    
     position: relative;
     list-style: none;
     height: 50px;
@@ -166,15 +173,20 @@ li{
     align-items: center;
 }
 
+.bag{
+    cursor: pointer;
+}
  a{
     display: block;
     align-items: center;
     text-decoration: none;
     border-radius: 0.8 rem;
+    cursor: pointer;
 }
 
+
 .games{
-    position: absolute;
+    position: relative;
     min-height: 100vh;
     top: 0;
     left: 80px;
@@ -189,22 +201,15 @@ li{
     position: absolute;
     min-height: 100vh;
     top: 0;
-    left: 80px;
     transition: all 0.2s ease;
-    width: calc(100% - 190px);
+    width: calc(100% - 195px);
     padding-left: 30px;
+    background-color: black;
+    z-index: 1;
     
     
 }
 
-.container{
-    display: flex;
-    justify-content: space-between;
-}
-
-.eshopPage{
-    display: flex;
-}
 
 .sideText{
     opacity: 0;
@@ -214,3 +219,4 @@ li{
     transition: opacity 0.5s;
     opacity: 1;
 }
+
