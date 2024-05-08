@@ -8,16 +8,23 @@
 
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .gamesGrid{
         grid-template-columns: 1fr 1fr;    
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 850px) {
     .gamesGrid{
         grid-template-columns: 1fr;    
     }
+    .gameTitle{
+        margin-left: 50px;
+        resize: none;
+        overflow: hidden;
+        padding-right: 50px;
+    }
+    
 }
 
 .gameImage{
@@ -30,6 +37,10 @@
     align-items: center;
 
     
+}
+
+.currentPage{
+    margin-bottom: 16px;
 }
 
 .price{
@@ -62,10 +73,19 @@
     align-items: center;
     width: 100%;
     text-align: center;
-    margin-left: 50px;
+    padding-left: 50px;
+    resize: none;
+    overflow: hidden;
+    resize: none;
+
 }
 
 .videogame{
-    box-shadow: 8px 8px 15px;
+    box-shadow: 10px 10px 10px rgb(167, 150, 150);
     border-radius: 5px;
+}
+
+.currentPage{
+    font-size: large;
+    font-weight: bold;
 }

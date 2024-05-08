@@ -6,6 +6,4 @@ menubtn.onclick = function(){
     sidebar.classList.toggle('active');
 };
 
-shopbtn.onclick = function(){
-    console.log('hi');
-};
+
